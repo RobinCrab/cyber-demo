@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cybersecurity Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .login-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            width: 300px;
+            text-align: center;
+        }
+        input[type="text"], input[type="password"] {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #1877f2;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #145db2;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>facebook. Login</h2>
+        <form id="LoginForm">
+            <input type="text" placeholder="Email or Phone"><br>
+            <input type="password" placeholder="Password"><br>
+            <button type="submit">Log In</button>
+        </form>
+        <p id="message"></p>
+    </div>
+
+    <script>
+        const form = document.getElementById('LoginForm');
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            document.getElementById('message').innerText = "Login attempt recorded";
+        });
+    </script>
+</body>
+</html>
